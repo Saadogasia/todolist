@@ -8,6 +8,8 @@ import {
   TextInput,
   TouchableOpacity,
   Keyboard,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Feather } from "@expo/vector-icons";
@@ -105,7 +107,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
       <View style={[styles.display, keyboardVisible && { marginBottom: 50 }]}>
         <ScrollView contentContainerStyle={styles.scrollViewContent}>
           {texts.map((task, index) => (
@@ -155,9 +160,10 @@ export default function App() {
       </TouchableOpacity>
 
       <StatusBar style="auto" />
-    </View>
+    </KeyboardAvoidingView>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -168,6 +174,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     alignItems: "center",
+    width: "100%",
     marginBottom: 50,
     paddingHorizontal: 20,
   },
@@ -193,14 +200,14 @@ const styles = StyleSheet.create({
   },
   display: {
     flex: 1,
-    top: 70,
     width: "100%",
     justifyContent: "flex-start",
     paddingHorizontal: 20,
-    position: "relative",
+    paddingTop: 50,
   },
   scrollViewContent: {
     paddingVertical: 10,
+    width: "100%",
   },
   taskText: {
     color: "white",
@@ -227,7 +234,7 @@ const styles = StyleSheet.create({
   },
   clear: {
     position: "absolute",
-    top: 50,
+    top: 30,
     right: 20,
     zIndex: 1,
   },
