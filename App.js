@@ -158,7 +158,6 @@ export default function App() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -207,6 +206,9 @@ const styles = StyleSheet.create({
     color: "white",
     marginBottom: 8,
     fontSize: 18,
+    flex: 1,
+    flexWrap: "wrap",
+    marginRight: 50,
   },
   doneText: {
     textDecorationLine: "line-through",
@@ -215,18 +217,13 @@ const styles = StyleSheet.create({
   taskContainer: {
     flexDirection: "row",
     alignItems: "center",
+    marginBottom: 5,
   },
   deleteText: {
-    position: "absolute",
-    bottom: 10,
-    right: 10,
-    zIndex: 1,
+    marginLeft: 10,
   },
   updatedTexts: {
-    position: "absolute",
-    bottom: 10,
-    right: 35,
-    zIndex: 1,
+    marginLeft: 10,
   },
   clear: {
     position: "absolute",
@@ -235,9 +232,6 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   done: {
-    position: "absolute",
-    bottom: 10,
-    right: 60,
-    zIndex: 1,
+    marginLeft: 10,
   },
 });
