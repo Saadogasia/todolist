@@ -4,7 +4,7 @@
     "slug": "todolist",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon1.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -16,7 +16,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon1.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.oggy057.todolist"
@@ -26,7 +26,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "4b0c67db-ce9c-4e3c-889a-94d1ac3fd8a2"
+        "projectId": "f5b20779-95ef-48c4-bc71-b87e28e6149a"
       }
     }
   }
