@@ -50,6 +50,4 @@ ToDoList is a simple and intuitive task management app designed to help you stay
 
 Feel free to submit issues or pull requests if you want to contribute to the development of ToDoList.
 
-## Contact
 
-For any questions or feedback, you can reach out to the developer at saadogasia@gmail.com.
